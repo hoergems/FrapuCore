@@ -10,7 +10,7 @@ namespace frapu
 
 struct EnvironmentInfo {
 public:
-    EnvironmentInfo();
+    EnvironmentInfo() {};
     std::vector<ObstacleSharedPtr> obstacles;
 };
 
