@@ -16,7 +16,7 @@ robotEnvironmentPath = shared_path + "/robot_environment/build"
 pathPlannerPath = shared_path + "/path_planner/build"
 viewerPath = shared_path + "/viewer_interface/build"
 rbdlPath = shared_path + "/rbdl_interface/build"
-kalmanPath = shared_path + "/kalman_filter/build"
+kalmanPath = shared_path + "/KalmanFilter/build"
 abtPath = shared_path + "/abt/src/problems/robot_problem/build"
 
 popen = subprocess.Popen(cmd_build_install, cwd=rbdlPath, shell=True)
