@@ -29,6 +29,19 @@ class VectorAction;
 typedef std::shared_ptr<frapu::Action> ActionSharedPtr;
 typedef std::shared_ptr<frapu::VectorAction> VectorActionSharedPtr;
 
+class ActionSpace;
+typedef std::shared_ptr<frapu::ActionSpace> ActionSpaceSharedPtr;
+class StateSpace;
+typedef std::shared_ptr<frapu::StateSpace> StateSpaceSharedPtr;
+class ObservationSpace;
+typedef std::shared_ptr<frapu::ObservationSpace> ObservationSpaceSharedPtr;
+
+class ActionLimits;
+typedef std::shared_ptr<frapu::ActionLimits> ActionLimitsSharedPtr;
+
+class StateLimits;
+typedef std::shared_ptr<frapu::StateLimits> StateLimitsSharedPtr;
+
 
 }
 
