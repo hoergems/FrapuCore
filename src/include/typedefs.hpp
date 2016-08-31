@@ -22,12 +22,14 @@ typedef std::shared_ptr<fcl::CollisionObject> CollisionObjectSharedPtr;
 class RobotState;
 class VectorState;
 typedef std::shared_ptr<frapu::RobotState> RobotStateSharedPtr;
+typedef std::shared_ptr<const frapu::RobotState> ConstRobotStateSharedPtr;
 typedef std::shared_ptr<frapu::VectorState> VectorStateSharedPtr;
 
 class Action;
 class VectorAction;
 typedef std::shared_ptr<frapu::Action> ActionSharedPtr;
 typedef std::unique_ptr<frapu::Action> ActionUniquePtr;
+typedef std::shared_ptr<const frapu::Action> ConstActionSharedPtr;
 typedef std::shared_ptr<frapu::VectorAction> VectorActionSharedPtr;
 typedef std::unique_ptr<frapu::VectorAction> VectorActionUniquePtr;
 
@@ -35,6 +37,7 @@ class Observation;
 class VectorObservation;
 typedef std::shared_ptr<frapu::Observation> ObservationSharedPtr;
 typedef std::unique_ptr<frapu::Observation> ObservationUniquePtr;
+typedef std::shared_ptr<const frapu::Observation> ConstObservationSharedPtr;
 typedef std::shared_ptr<frapu::VectorObservation> VectorObservationSharedPtr;
 typedef std::unique_ptr<frapu::VectorObservation> VectorObservationUniquePtr;
 
