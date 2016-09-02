@@ -8,9 +8,19 @@
 namespace frapu
 {
 
-struct EnvironmentInfo {
+class EnvironmentInfo {
 public:
-    EnvironmentInfo() {};
+    EnvironmentInfo():
+        obstacles() {
+
+    };
+    
+    frapu::EnvironmentInfoSharedPtr copy() const {
+	frapu::EnvironmentInfoSharedPtr copiedEnvironmentInfo = std::make_shared<frapu::EnvironmentInfo>();
+	copiedEnvironmentInfo->obstacles = obstacles;
+	return copiedEnvironmentInfo;
+    }
+    
     std::vector<ObstacleSharedPtr> obstacles;
 };
 
