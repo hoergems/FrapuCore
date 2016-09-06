@@ -19,11 +19,18 @@ typedef std::unique_ptr<frapu::EnvironmentInfo> EnvironmentInfoUniquePtr;
 
 typedef std::shared_ptr<fcl::CollisionObject> CollisionObjectSharedPtr;
 
+class Robot;
+typedef std::shared_ptr<frapu::Robot> RobotSharedPtr;
+typedef std::unique_ptr<frapu::Robot> RobotUniquePtr;
+
 class RobotState;
 class VectorState;
 typedef std::shared_ptr<frapu::RobotState> RobotStateSharedPtr;
 typedef std::shared_ptr<const frapu::RobotState> ConstRobotStateSharedPtr;
 typedef std::shared_ptr<frapu::VectorState> VectorStateSharedPtr;
+
+class RobotEnvironment;
+typedef std::shared_ptr<frapu::RobotEnvironment> RobotEnvironmentSharedPtr;
 
 class Action;
 class VectorAction;
@@ -68,6 +75,12 @@ typedef std::shared_ptr<frapu::Particle> ParticleSharedPtr;
 
 class Serializer;
 typedef std::shared_ptr<frapu::Serializer> SerializerSharedPtr;
+
+class PathPlanner;
+typedef std::shared_ptr<frapu::PathPlanner> PathPlannerSharedPtr;
+
+class Trajectory;
+typedef std::shared_ptr<frapu::Trajectory> TrajectorySharedPtr;
 
 
 }

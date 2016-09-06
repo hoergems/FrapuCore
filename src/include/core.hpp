@@ -3,6 +3,7 @@
 #include "typedefs.hpp"
 #include "interface.hpp"
 #include "Obstacle.hpp"
+#include "PathPlanner.hpp"
 #include "utils.hpp"
 
 namespace frapu
