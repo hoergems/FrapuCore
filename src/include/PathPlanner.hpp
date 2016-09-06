@@ -9,11 +9,12 @@ class PathPlanner
 {
 public:
     PathPlanner() {
-	
+
     }
-    
-    virtual TrajectorySharedPtr solve(const RobotStateSharedPtr &robotState, 
-				      double timeout) = 0;
+
+    virtual TrajectorySharedPtr solve(const RobotStateSharedPtr& robotState,
+                                      double timeout) = 0;
+        
 
 };
 }
