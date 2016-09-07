@@ -13,6 +13,9 @@ typedef std::unique_ptr<frapu::Obstacle> ObstacleUniquePtr;
 typedef std::shared_ptr<frapu::Terrain> TerrainSharedPtr;
 typedef std::unique_ptr<frapu::Terrain> TerrainUniquePtr;
 
+class Scene;
+typedef std::shared_ptr<frapu::Scene> SceneSharedPtr;
+
 struct EnvironmentInfo;
 typedef std::shared_ptr<frapu::EnvironmentInfo> EnvironmentInfoSharedPtr;
 typedef std::unique_ptr<frapu::EnvironmentInfo> EnvironmentInfoUniquePtr;
@@ -81,6 +84,12 @@ typedef std::shared_ptr<frapu::PathPlanner> PathPlannerSharedPtr;
 
 class Trajectory;
 typedef std::shared_ptr<frapu::Trajectory> TrajectorySharedPtr;
+
+class RewardModel;
+typedef std::shared_ptr<frapu::RewardModel> RewardModelSharedPtr;
+
+class Goal;
+typedef std::shared_ptr<frapu::Goal> GoalSharedPtr;
 
 
 }

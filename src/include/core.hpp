@@ -5,24 +5,26 @@
 #include "Obstacle.hpp"
 #include "PathPlanner.hpp"
 #include "utils.hpp"
+#include "Goal.hpp"
 
 namespace frapu
 {
 
-class EnvironmentInfo {
+class EnvironmentInfo
+{
 public:
     EnvironmentInfo():
-        obstacles() {
+        scene() {
 
     };
-    
+
     frapu::EnvironmentInfoSharedPtr copy() const {
-	frapu::EnvironmentInfoSharedPtr copiedEnvironmentInfo = std::make_shared<frapu::EnvironmentInfo>();
-	copiedEnvironmentInfo->obstacles = obstacles;
-	return copiedEnvironmentInfo;
+        frapu::EnvironmentInfoSharedPtr copiedEnvironmentInfo = std::make_shared<frapu::EnvironmentInfo>();
+        copiedEnvironmentInfo->scene = scene;
+        return copiedEnvironmentInfo;
     }
-    
-    std::vector<ObstacleSharedPtr> obstacles;
+
+    frapu::SceneSharedPtr scene;
 };
 
 
