@@ -25,6 +25,8 @@ public:
     const bool isObservable() const {
         return observable_;
     }
+    
+    virtual const double getTraversalCost() const = 0;
 
 protected:
     bool traversable_;

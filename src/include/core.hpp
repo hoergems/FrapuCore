@@ -7,6 +7,7 @@
 #include "utils.hpp"
 #include "Goal.hpp"
 #include "logging.hpp"
+#include "CollisionReport.hpp"
 
 namespace frapu
 {

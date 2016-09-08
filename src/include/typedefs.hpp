@@ -22,6 +22,12 @@ typedef std::unique_ptr<frapu::EnvironmentInfo> EnvironmentInfoUniquePtr;
 
 typedef std::shared_ptr<fcl::CollisionObject> CollisionObjectSharedPtr;
 
+class CollisionReport;
+typedef std::shared_ptr<CollisionReport> CollisionReportSharedPtr;
+
+class CollisionChecker;
+typedef std::shared_ptr<CollisionChecker> CollisionCheckerSharedPtr;
+
 class Robot;
 typedef std::shared_ptr<frapu::Robot> RobotSharedPtr;
 typedef std::unique_ptr<frapu::Robot> RobotUniquePtr;

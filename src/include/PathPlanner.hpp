@@ -17,6 +17,17 @@ public:
         
 
 };
+
+class CollisionChecker {
+public:
+    CollisionChecker() {
+	
+    }
+    
+    virtual void makeCollisionReport(frapu::CollisionReportSharedPtr &collisionReport) const = 0;
+    
+};
+
 }
 
 #endif
