@@ -27,7 +27,7 @@ public:
 
     virtual double distanceCenter(const std::vector<double>& point) const = 0;
     
-    virtual std::vector<double> getGoalArea() const = 0;
+    virtual getGoalArea(std::vector<double> &goalArea) const = 0;
 
 protected:
     std::vector<double> center_;
@@ -58,13 +58,12 @@ public:
 	return false;
     }
     
-    virtual std::vector<double> getGoalArea() const override {
-	std::vector<double> goalArea(4);
+    virtual getGoalArea(std::vector<double> &goalArea) const override {
+	goalArea = std::vector<double>(4);	
 	goalArea[0] = center_[0];
 	goalArea[1] = center_[1];
 	goalArea[2] = center_[2];
-	goalArea[3] = radius_;
-	return goalArea;
+	goalArea[3] = radius_;	
     }
 
 protected:
