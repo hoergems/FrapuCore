@@ -6,6 +6,7 @@
 #include "PathPlanner.hpp"
 #include "utils.hpp"
 #include "Goal.hpp"
+#include "logging.hpp"
 
 namespace frapu
 {

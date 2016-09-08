@@ -38,7 +38,8 @@ class SphereGoal: public SpatialGoal
 {
 public:
     SphereGoal(std::vector< double >& center, double& radius):
-        SpatialGoal(center) {
+        SpatialGoal(center),
+        radius_(radius) {
 
     }
 
