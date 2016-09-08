@@ -46,6 +46,10 @@ public:
 	return euclideanDistance(point, center_);
     }
     
+    virtual bool isSatisfied(frapu::RobotStateSharedPtr& state) const override {
+	return false;
+    }
+    
     virtual double isSatisfied(const std::vector<double>& point) const {
 	if (distanceCenter(point) < radius_) {
 	    return true;
