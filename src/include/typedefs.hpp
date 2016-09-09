@@ -70,11 +70,11 @@ typedef std::shared_ptr<frapu::ActionLimits> ActionLimitsSharedPtr;
 class StateLimits;
 typedef std::shared_ptr<frapu::StateLimits> StateLimitsSharedPtr;
 
-class Heuristic;
-typedef std::shared_ptr<frapu::Heuristic> HeuristicSharedPtr;
-
 class HeuristicInfo;
 typedef std::shared_ptr<frapu::HeuristicInfo> HeuristicInfoSharedPtr;
+
+class HeuristicFunction;
+typedef std::shared_ptr<frapu::HeuristicFunction> HeuristicFunctionSharedPtr;
 
 class Belief;
 typedef std::shared_ptr<frapu::Belief> BeliefSharedPtr;

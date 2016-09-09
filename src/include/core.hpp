@@ -8,30 +8,12 @@
 #include "Goal.hpp"
 #include "logging.hpp"
 #include "CollisionReport.hpp"
+#include "HeuristicFunction.hpp"
+#include "trajectory.hpp"
+#include "RewardModel.hpp"
 
 namespace frapu
 {
-
-class EnvironmentInfo
-{
-public:
-    EnvironmentInfo():
-        scene() {
-
-    };
-
-    frapu::EnvironmentInfoSharedPtr copy() const {
-        frapu::EnvironmentInfoSharedPtr copiedEnvironmentInfo = std::make_shared<frapu::EnvironmentInfo>();
-        copiedEnvironmentInfo->scene = scene;
-        return copiedEnvironmentInfo;
-    }
-
-    frapu::SceneSharedPtr scene;
-};
-
-
-
-
 
 }
 

@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <memory>
+#include <functional>
 
 #include "fcl/BVH/BVH_model.h"
 #include "fcl/BV/BV.h"
