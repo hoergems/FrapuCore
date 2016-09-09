@@ -60,6 +60,10 @@ public:
 	terminalFunction_ = terminalFunction;
     }
     
+    virtual void setRobot(frapu::RobotSharedPtr &robot) {
+	robot_ = robot;
+    }
+    
 protected:
     frapu::RobotSharedPtr robot_;
 
