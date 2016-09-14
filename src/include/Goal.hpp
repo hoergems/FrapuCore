@@ -43,11 +43,11 @@ public:
 
     }
 
-    virtual double distanceCenter(const std::vector<double>& point) const override {
+    virtual double distanceCenter(const std::vector<double>& point) const override {	
 	return euclideanDistance(point, center_);
     }
     
-    virtual bool isSatisfied(frapu::RobotStateSharedPtr& state) const override {
+    virtual bool isSatisfied(frapu::RobotStateSharedPtr& state) const override {	
 	return false;
     }
     

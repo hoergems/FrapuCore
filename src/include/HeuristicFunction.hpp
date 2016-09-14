@@ -109,7 +109,7 @@ public:
 	
 	if (!terminalFunction_) {
 	    frapu::ERROR("RRTHeuristicFunction: terminalFunction has not been set");
-	}
+	}	
 
         frapu::RewardModelSharedPtr rewardModel = heuristicInfo->rewardModel;
         frapu::TrajectorySharedPtr trajectory =
@@ -123,7 +123,7 @@ public:
         collisionReport->state1 = nullptr;
         collisionReport->ignoreUnobservableObstacles = true;
         double reward = 0.0;
-        for (size_t i = 0; i < trajectory->stateTrajectory.size(); i++) {
+        for (size_t i = 0; i < trajectory->stateTrajectory.size(); i++) {	    
             if (terminalFunction_(trajectory->stateTrajectory[i])) {
                 reward += std::pow(rewardModel->discountFactor, heuristicInfo->currentStep + i) * rewardModel->exitReward;
                 break;

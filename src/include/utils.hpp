@@ -31,13 +31,13 @@ inline void hash_combine(std::size_t& seed, T const& v)
 }
 
 inline double euclideanDistance(const std::vector<double>& vec1, const std::vector<double>& vec2)
-{
+{    
     double sum = 0.0;
     for (size_t i = 0; i < vec1.size(); i++) {
-        sum += pow(vec2[i] - vec1[i], 2);
+        sum += std::pow(vec2[i] - vec1[i], 2);
     }
-
-    return sqrt(sum);
+    
+    return std::sqrt(sum);
 }
 
 }
