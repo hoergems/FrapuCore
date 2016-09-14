@@ -8,6 +8,7 @@ shared_path = os.path.dirname(os.path.abspath(__file__))
 cmd_build_install = "make -j3 && sudo make install"
 cmd_build = "make -j3"
 cmd_install = "sudo make install"
+cmake_command_abt = "cmake -DCMAKE_BUILD_TYPE=Debug .."
 
 frapuPath = shared_path + "/FrapuCore/build"
 robotHeadersPath = shared_path + "/robot_headers/build"
@@ -23,17 +24,19 @@ popen = subprocess.Popen(cmd_build_install, cwd=rbdlPath, shell=True)
 popen.wait()
 popen = subprocess.Popen(cmd_build_install, cwd=viewerPath, shell=True)
 popen.wait()
-popen = subprocess.Popen(cmd_build_install, cwd=kalmanPath, shell=True)
-popen.wait()
 popen = subprocess.Popen(cmd_install, cwd=robotHeadersPath, shell=True)
 popen.wait()
 popen = subprocess.Popen(cmd_build_install, cwd=frapuPath, shell=True)
 popen.wait()
 popen = subprocess.Popen(cmd_build_install, cwd=robotsPath, shell=True)
 popen.wait()
+popen = subprocess.Popen(cmd_build_install, cwd=pathPlannerPath, shell=True)
+popen.wait()
 popen = subprocess.Popen(cmd_build_install, cwd=robotEnvironmentPath, shell=True)
 popen.wait()
-popen = subprocess.Popen(cmd_build_install, cwd=pathPlannerPath, shell=True)
+popen = subprocess.Popen(cmd_build_install, cwd=kalmanPath, shell=True)
+popen.wait()
+popen = subprocess.Popen(cmake_command_abt, cwd=abtPath, shell=True)
 popen.wait()
 popen = subprocess.Popen(cmd_build, cwd=abtPath, shell=True)
 popen.wait()
