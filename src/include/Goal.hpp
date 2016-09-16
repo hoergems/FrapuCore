@@ -59,7 +59,7 @@ public:
 	return false;
     }
     
-    virtual getGoalArea(std::vector<double> &goalArea) const override {
+    virtual void getGoalArea(std::vector<double> &goalArea) const override {
 	goalArea = std::vector<double>(4);	
 	goalArea[0] = center_[0];
 	goalArea[1] = center_[1];
