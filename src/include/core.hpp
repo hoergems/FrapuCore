@@ -14,6 +14,8 @@
 
 namespace frapu
 {
+    
+static int globalSeed = 0;
 
 }
 
