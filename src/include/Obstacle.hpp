@@ -25,7 +25,7 @@ public:
     const bool isObservable() const {
         return observable_;
     }
-    
+
     virtual const double getTraversalCost() const = 0;
 
 protected:
@@ -78,7 +78,8 @@ protected:
 class Scene
 {
 public:
-    Scene() {
+    Scene():
+        obstacles_() {
 
     }
 
@@ -117,7 +118,7 @@ public:
         return true;
     }
 
-    void getObstacles(std::vector<frapu::ObstacleSharedPtr> &obstacles) const {
+    void getObstacles(std::vector<frapu::ObstacleSharedPtr>& obstacles) const {
         obstacles = obstacles_;
     }
 
@@ -132,13 +133,13 @@ public:
         return nullptr;
     }
 
-    void getTraversableObstacles(std::vector<frapu::ObstacleSharedPtr> &traversableObstacles) const {
-	traversableObstacles.clear();
-	for (size_t i = 0; i < obstacles_.size(); i++) {
-	    if (obstacles_[i]->getTerrain()->isTraversable()) {
-		traversableObstacles.push_back(obstacles_[i]);
-	    }
-	}
+    void getTraversableObstacles(std::vector<frapu::ObstacleSharedPtr>& traversableObstacles) const {
+        traversableObstacles.clear();
+        for (size_t i = 0; i < obstacles_.size(); i++) {
+            if (obstacles_[i]->getTerrain()->isTraversable()) {
+                traversableObstacles.push_back(obstacles_[i]);
+            }
+        }
     }
 
     void getObservableObstacles(std::vector<frapu::ObstacleSharedPtr>& obstacles) const {
