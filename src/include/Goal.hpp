@@ -27,7 +27,7 @@ public:
 
     virtual double distanceCenter(const std::vector<double>& point) const = 0;
     
-    virtual getGoalArea(std::vector<double> &goalArea) const = 0;
+    virtual void getGoalArea(std::vector<double> &goalArea) const = 0;
 
 protected:
     std::vector<double> center_;
