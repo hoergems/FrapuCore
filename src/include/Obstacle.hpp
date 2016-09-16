@@ -117,7 +117,7 @@ public:
         return true;
     }
 
-    getObstacles(std::vector<frapu::ObstacleSharedPtr> &obstacles) const {
+    void getObstacles(std::vector<frapu::ObstacleSharedPtr> &obstacles) const {
         obstacles = obstacles_;
     }
 
