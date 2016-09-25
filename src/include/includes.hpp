@@ -11,5 +11,6 @@
 #include "fcl/shape/geometric_shapes.h"
 #include "fcl/shape/geometric_shapes_utility.h"
 #include <boost/filesystem.hpp>
+#include <Eigen/Dense>
 
 #endif
